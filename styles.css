@@ -3,7 +3,7 @@
 * {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: left;
-    color: #312783;
+    color: RGB(0,0,100);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,13 +16,17 @@ body {
   flex-direction: column;
 }
 
+header {
+  padding-top: 17%;
+}
+
 main {
-  height: 70vh;
+  height: 50vh;
 }
 
 footer {
   background-color: #EF85B4;
-  padding: 5%;
+  padding: 1%;
   margin-top: auto;
 }
 
@@ -46,27 +50,182 @@ li {
   background-color: #E5DB9F;
   border-style: solid;
   border-radius: 20%;
+  box-shadow: 5px 5px 0px #312783;
   height: 4em;
   width: 4em;
-  margin: 1em;
-  border-color: #464a75;
+  margin: 0.5em;
+  border-color: #312783;
   text-align: center;
+  transition: all 0.05s linear;
 }
 
-img {
-    filter: grayscale(100%);
-    transition: filter 0.3s;
-  }
+li:active {
+  background-color: #99C97F;
+  transform: translateY(3px);
+  box-shadow: none;
+}
 
 h1 {
     text-align: center;
-    margin-top: 10%;
+    margin-top: -4%;
+    font-weight: 800;
 }
 
-  img:active {
-    filter: grayscale(0%);
+p {
+  font-size: 0.85em;
+  line-height: 1.2em;
+  margin: 1em 4em 1em 4em;
+}
+
+strong {
+  font-weight: 800;
+}
+
+/* Waarom Zeewier? */
+.bg-waarom-zeewier {
+  background-image: url('img/waarom-zeewierpapier.png'), url('img/waarom-zeewier-bg.png') ;
+  background-size: cover;
+  background-position: center, center;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  z-index: 1; /* Zorg ervoor dat deze boven andere elementen staat */
+}
+
+.tekst-container-waarom {
+  position: absolute;
+  margin-top: 10px;
+  padding:3%;
+  left: 0;
+  right: 0;
+}
+
+.dulse {
+  height: 15vh;
+  position: absolute;
+  left:17em;
+  top:2.5em;
+  transform: rotate(30deg);
+  animation: float1 4s ease-in-out infinite;
+}
+
+.zeesla {
+  height: 20vh;
+  position: absolute;
+  left: 1em;
+  bottom: 9em;
+  transform: rotate(190deg);
+  animation: float2 6s ease-in-out infinite;;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translatey(0%);
   }
 
-.zeewierwinkel {
+  50% {
+    transform: translatey(10%);
+  }
+
+  100% {
+    transform: translatey(0%);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(0%);
+  }
+
+  50% {
+    transform: translatey(20%);
+  }
+
+  100% {
+    transform: translatey(0%);
+  }
+}
+
+
+/* Zeewierwinkel */
+.header-zeewierwinkel {
+background-image: url('img/header-paper-img.png');
+background-size: cover;
+background-repeat: no-repeat;
+padding: 17%;
+}
+
+.bg-zeewierwinkel {
   background-image: url('img/zeewierwinkel-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.zeewier-papier {
+  position: absolute;
+}
+
+.burger {
+  width: 10vh;
+  text-align: center;
+  animation: rotate 6s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.zeewier-papier {
+  position: absolute;
+  top: -3em;
+  left: 0;
+  width: 100vw;
+  height: 65vh;
+}
+
+.burger {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.tekst-container-winkel {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+
+/* Andere toepassingen van Zeewier */
+.bg-toepassingen-zeewier {
+  background-image: url('img/toepassingen-bg.png');
+  background-size: cover;
+  background-position: center, center;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+}
+
+.papier1 {
+  background-image: url('img/papier/paper1.png');
+  width: 60vw;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 0,23%,0,23%;
+  position: absolute;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+  top:5em;
+  left:1em;
 }
