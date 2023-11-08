@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #99C97F;
+  background-color: #24244B;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  height: 50vh;
+  flex-grow: 1;
 }
 
 footer {
@@ -33,7 +33,7 @@ footer {
 nav {
   display: flex;
   justify-content: center;
-  color: #464a75;
+  color: #E5DB9F;
   text-decoration: none;
   align-content: space-between;
 }
@@ -47,10 +47,10 @@ ul {
 
 li {
   padding: 1em;
-  background-color: #E5DB9F;
-  border-style: solid;
+  background-color: #312783;
   border-radius: 20%;
-  box-shadow: 5px 5px 0px #312783;
+  box-shadow: 5px 5px 0px #E5DB9F;
+  color: #E5DB9F;
   height: 4em;
   width: 4em;
   margin: 0.5em;
@@ -67,8 +67,9 @@ li:active {
 
 h1 {
     text-align: center;
-    margin-top: -4%;
+    margin-top: -2%;
     font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 p {
@@ -158,12 +159,6 @@ padding: 17%;
 .bg-zeewierwinkel {
   background-image: url('img/zeewierwinkel-bg.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.zeewier-papier {
-  position: absolute;
 }
 
 .burger {
@@ -188,7 +183,7 @@ padding: 17%;
 
 .zeewier-papier {
   position: absolute;
-  top: -3em;
+  top: -2.9em;
   left: 0;
   width: 100vw;
   height: 65vh;
