@@ -3,7 +3,7 @@
 * {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: left;
-    color: RGB(0,0,100);
+    color: #24244B;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,6 +18,10 @@ body {
 
 header {
   padding-top: 17%;
+  background-image: url('../img/header-paper-img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 17%;
 }
 
 main {
@@ -25,36 +29,25 @@ main {
 }
 
 footer {
-  background-color: #EF85B4;
-  padding: 1%;
+  background-color: #24244B;
+  padding: 1.5%;
   margin-top: auto;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  color: #E5DB9F;
-  text-decoration: none;
-  align-content: space-between;
 }
 
 ul {
   display: flex;
-  list-style-type: none;
   justify-content: center;
-  align-content: space-around;
 }
 
 li {
   padding: 1em;
   background-color: #24244B;
   border-radius: 20%;
-  box-shadow: 4px 4px 0px #E5DB9F;
+  border: solid 1px #E18AB3;
+  box-shadow: -3px 3px 3px #E18AB3;
   height: 4em;
   width: 4em;
   margin: 0.5em;
-  border-color: #312783;
-  text-align: center;
   transition: all 0.05s linear;
 }
 
@@ -65,28 +58,23 @@ li:active {
 }
 
 h1 {
-    text-align: center;
-    white-space: nowrap; /* Voorkomt automatische tekstomloop */
+    text-align: center; /* Voorkomt automatische tekstomloop */
     position: relative;
     word-break: break-word;
     margin-top: -2%;
     line-height: 1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 600;
 }
 
 h6 {
   font-size: 1em;
+  font-weight: 900;
 }
 
 p {
   font-size: 0.85em;
   line-height: 1.2em;
-  margin: 1em 4em 1em 4em;
-}
-
-a {
-  color: #E5DB9F;
+  margin: 1em 4em;
 }
 
 p:first-of-type {
@@ -102,28 +90,74 @@ p:first-of-type {
 
 .center-logo {
   display: flex;
-  justify-content: center; /* Horizontaal centreren */
-  align-items: center; /* Verticaal centreren */
-  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
   height:50vh;
-  animation: float3 1.5s ease-in-out infinite; 
+  animation: hithere 1.5s ease infinite; 
 }
 
-@keyframes float3 {
-  0% {
-    transform: translatey(0%);
-  }
-
-  50% {
-    transform: translatey(3%);
-  }
-
-  100% {
-    transform: translatey(0%);
-  }
+@keyframes hithere {
+  30% { transform: scale(1.1); }
+  40%, 60% { transform: rotate(-15deg) scale(1.1); }
+  50% { transform: rotate(15deg) scale(1.1); }
+  70% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: scale(1); }
 }
+
+/* Zeewierwinkel */  
+  .bg-zeewierwinkel {
+    background-image: url('../img/zeewierwinkel-bg.png');
+    background-size: cover;
+    display: flex;
+  }
+  
+  .burger {
+    width: 10vh;
+    text-align: center;
+    animation: rotate 6s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .zeewier-papier {
+    position: absolute;
+    top: -2.5em;
+    left: 0;
+    width: 100vw;
+    height: 65vh;
+  }
+  
+  .burger {
+    width: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .tekst-container-winkel {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
 
 /* Waarom Zeewier? */
+.header-waarom-zeewier {
+  background-image: none;
+  }
+
 .bg-waarom-zeewier {
   background-image: url('../img/waarom-zeewierpapier.png'), url('../img/waarom-zeewier-bg.png');
   background-size: cover;
@@ -136,7 +170,7 @@ p:first-of-type {
 
 .tekst-container-waarom {
   position: absolute;
-  margin-top: 10px;
+  margin-top: -10%;
   padding:3%;
   left: 0;
   right: 0;
@@ -188,86 +222,16 @@ p:first-of-type {
   }
 }
 
-
-/* Zeewierwinkel */
-.header-zeewierwinkel {
-background-image: url('../img/header-paper-img.png');
-background-size: cover;
-background-repeat: no-repeat;
-padding: 17%;
-}
-
-.header-container {
-  overflow: hidden; /* Verberg de inhoud die uit de container loopt */
-  width: 125px; /* Stel een maximale hoogte in voor de container */
-  text-align: center;
-  border:#24244B solid 1px;
-  white-Space: nowrap;
-  text-overflow: ellipses;
-}
-
-.bg-zeewierwinkel {
-  background-image: url('../img/zeewierwinkel-bg.png');
-  background-size: cover;
-  display: flex;
-}
-
-.burger {
-  width: 10vh;
-  text-align: center;
-  animation: rotate 6s ease-in-out infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.container {
-  position: relative;
-  text-align: center;
-}
-
-.zeewier-papier {
-  position: absolute;
-  top: -2.5em;
-  left: 0;
-  width: 100vw;
-  height: 65vh;
-}
-
-.burger {
-  width: 60px;
-  display: block;
-  margin: 0 auto;
-}
-
-.tekst-container-winkel {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-}
-
 /* Andere toepassingen van Zeewier */
 .bg-toepassingen-zeewier {
   background-image: url('../img/toepassingen-bg.png');
   background-size: cover;
-  background-position: center, center;
-  position: relative;
-  height: 100vh;
-  justify-content: center;
 }
 
 .papier1 {
   background-image: url('../img/papier/paper1.png');
   width: 100vw;
   font-size: 2em;
-  font-weight: 900;
   padding: 9% 23% 33% 23%;
   position: absolute;
   background-repeat: no-repeat;
@@ -280,7 +244,6 @@ padding: 17%;
   background-image: url('../img/papier/paper2.png');
   height: 100px;
   font-size: 1.2em;
-  font-weight: 900;
   padding: 10% 5%;
   position: absolute;
   background-repeat: no-repeat;
@@ -293,7 +256,6 @@ padding: 17%;
   background-image: url('../img/papier/paper3.png');
   height: 100px;
   font-size: 1.9em;
-  font-weight: 900;
   padding: 10% 5%;
   position: absolute;
   background-repeat: no-repeat;
@@ -306,7 +268,6 @@ padding: 17%;
   background-image: url('../img/papier/paper4.png');
   height: 100px;
   font-size: 1em;
-  font-weight: 900;
   padding: 12% 5%;
   position: absolute;
   background-repeat: no-repeat;
@@ -320,7 +281,6 @@ padding: 17%;
   font-size: 2em;
   line-height: 1em;
   word-break: break-word;
-  font-weight: 900;
   padding: 22% 25% 50% 10%;
   position: absolute;
   background-repeat: no-repeat;
@@ -336,7 +296,6 @@ padding: 17%;
   height: 100vh;
   font-size: 1.5em;
   line-height: 1em;
-  font-weight: 900;
   padding: 15% 12% 15% 20%;
   position: absolute;
   background-repeat: no-repeat;
@@ -350,11 +309,40 @@ padding: 17%;
   height: 100vh;
   font-size: 1.5em;
   line-height: 1em;
-  font-weight: 900;
   padding: 15% 12% 15% 20%;
   position: absolute;
   background-repeat: no-repeat;
   transform: rotate(50deg);
   top:6em;
   right:16em;
+}
+
+/* NAV */
+ul li:nth-child(1) img{
+  height: 6.5vh;
+  margin-left: -13px;
+  margin-top: -7px;
+}
+
+ul li:nth-child(2) img{
+  height: 7vh;
+  margin-left: -13px;
+  margin-top: -6px;
+}
+
+ul li:nth-child(3) img{
+  height: 7vh;
+  margin-left: -13px;
+  margin-top: -6px;
+}
+
+ul li:nth-child(4) img{
+  height: 7vh;
+  margin-left: -12px;
+  margin-top: -6px;
+}
+
+.locatie {
+  background-color: #E5DB9F;
+  border:#99C97F solid 1px;
 }
