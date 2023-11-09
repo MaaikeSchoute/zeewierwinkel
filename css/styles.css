@@ -176,7 +176,7 @@ p:first-of-type {
   right: 0;
 }
 
-.dulse {
+header img {
   height: 15vh;
   position: absolute;
   left:17em;
@@ -185,7 +185,7 @@ p:first-of-type {
   animation: float1 4s ease-in-out infinite;
 }
 
-.zeesla {
+#zeesla {
   height: 20vh;
   position: absolute;
   left: 1em;
